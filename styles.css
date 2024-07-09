@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.playfair-display-regular, h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.roboto-regular, p, a, span {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color:rgb(68, 68, 68);
+    line-height: 1.5rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    display: flex;
+}
+
+header{
+    background-color: #0891B2;
+    margin-bottom: 2px;
+}
+
+.person{
+    position: relative;
+    color: white
+}
+.person img{
+    object-fit: contain;
+    max-width: 400px;
+}
+.person h1{
+    position: absolute;
+    top: calc(100% - 3rem - 15px);
+    right: 15px;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3rem;
+}
+.about-me{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 3rem 0 2.5rem 0;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+}
+.about-me h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.about-me p{
+    flex: 1;
+}
+.about-me .social-icons{
+    display: flex;
+    justify-content: end;
+}
+
+.social-icons{
+    gap: 1rem;
+}
+.social-icons i{
+    font-size: 1.8rem;
+}
+
+.separator{
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-bottom: 16vw solid white;
+    margin-top: -16vw;
+}
+
+main .content{
+    flex-direction: column
+}
+main h2{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.56rem;
+}
+.projects-cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+}
+.card .top-part{
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #9E1C1C;
+}
+
+.card:nth-child(1) .top-part{background-color: #9E1C1C;}
+.card:nth-child(2) .top-part{background-color: #7C75CA;}
+.card:nth-child(3) .top-part{background-color: #C363B4;}
+.card:nth-child(4) .top-part{background-color: #D88F39;}
+.card:nth-child(5) .top-part{background-color: #7C75CA;}
+.card:nth-child(6) .top-part{background-color: #5E8F4D;}
+
+.card .top-part h3{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card .bottom-part {
+    padding: 0.6rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.card .bottom-part .project-name{
+    display: flex;
+    justify-content: space-between;
+}
+.card .bottom-part .project-name i{
+    font-size: 1.4rem;
+    margin: 0.1rem 0.4rem;
+}
+.card .bottom-part p{
+    line-height: normal;
+    font-size: 0.9rem;
+}
+
+footer{
+    background-color: #0891B2;
+    color: white;
+}
+
+footer .content{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .content img{
+    max-width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+footer .content .contact-info h2 {
+    font-size: 2rem;
+}
+footer .content .contact-info p{
+    color: white;
+    line-height: 1.2rem;
+    margin: 1.4rem 0;
+}
+footer .content .contact-info .phone-number p, footer .content .contact-info .email p{
+    margin: 0.4rem 0;
+}
+
+.phone-number, .email{
+    display: flex;
+}
+.phone-number img, .email img{
+    height: auto;
+    width: 25px;
+    margin-right: 10px;
+    fill: white;
+}
+
+.contact-info .social-icons{
+    margin: 1.4rem 0;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.shadow{
+    box-shadow: 0px 0px 5px 1px rgba(138,138,138,1);
+}
+
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .person h1{
+        position: absolute;
+        top: 8%;
+        left: 85%;
+        text-wrap: nowrap;
+    }
+
+    .about-me{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: 6rem 0 -10% -30%;
+        padding: 1.5rem 2rem 1.5rem calc(30% + 2rem);
+    }
+    .about-me h2{
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .about-me .social-icons{
+        display: none;
+    }
+
+    .projects-cards{
+        grid-template-columns: auto auto;
+    }
+
+    .card:nth-child(1) .top-part{background-color: #9E1C1C;}
+    .card:nth-child(2) .top-part{background-color: #7C75CA;}
+    .card:nth-child(3) .top-part{background-color: #C363B4;}
+    .card:nth-child(4) .top-part{background-color: #D88F39;}
+    .card:nth-child(5) .top-part{background-color: #7C75CA;}
+    .card:nth-child(6) .top-part{background-color: #5E8F4D;}
+
+
+    footer .content img{
+        max-width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    header .content{
+        flex-direction: column;
+    }
+    .person{
+        position: relative;
+        color: white;
+    }
+    .person img{
+        object-fit: contain;
+        max-width: 100%;
+    }
+    .person h1{
+        position: absolute;
+        top: calc(100% - 3rem - 15px);
+        left: 15px;
+        right: 0;
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 3rem;
+    }
+    .about-me{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: 3rem 0 2.5rem 0;
+        padding: 1.5rem 2rem 1.5rem 2rem;
+    }
+    .about-me h2{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .about-me p{
+        flex: 1;
+    }
+    .about-me .social-icons{
+        display: flex;
+        justify-content: end;
+    }
+    
+    .social-icons{
+        gap: 1rem;
+    }
+    .social-icons i{
+        font-size: 1.8rem;
+    }
+
+    .projects-cards{
+        grid-template-columns: auto;
+    }
+
+    .card:nth-child(1) .top-part{background-color: #9E1C1C;}
+    .card:nth-child(2) .top-part{background-color: #7C75CA;}
+    .card:nth-child(3) .top-part{background-color: #C363B4;}
+    .card:nth-child(4) .top-part{background-color: #D88F39;}
+    .card:nth-child(5) .top-part{background-color: #7C75CA;}
+    .card:nth-child(6) .top-part{background-color: #5E8F4D;}
+
+    footer .content{
+        flex-direction: column;
+    }
+    footer .content img{
+        max-width: 100%;
+    }
+}
